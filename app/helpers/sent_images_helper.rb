@@ -1,0 +1,2 @@
+module SentImagesHelper
+end

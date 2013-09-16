@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  image_name: MyString
+  date_sent: MyString
+  quantity: 1
+  recipient: MyString
+  size_of_image: MyString
+
+two:
+  image_name: MyString
+  date_sent: MyString
+  quantity: 1
+  recipient: MyString
+  size_of_image: MyString

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image name:</strong>
+  <%= @sent_image.image_name %>
+</p>
+
+<p>
+  <strong>Date sent:</strong>
+  <%= @sent_image.date_sent %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @sent_image.quantity %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @sent_image.recipient %>
+</p>
+
+<p>
+  <strong>Size of image:</strong>
+  <%= @sent_image.size_of_image %>
+</p>
+
+<%= link_to 'Edit', edit_sent_image_path(@sent_image) %> |
+<%= link_to 'Back', sent_images_path %>

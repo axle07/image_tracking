@@ -1,0 +1,37 @@
+<%= form_for(@sent_image) do |f| %>
+  <% if @sent_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sent_image.errors.count, "error") %> prohibited this sent_image from being saved:</h2>
+
+      <ul>
+      <% @sent_image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_name %><br>
+    <%= f.text_field :image_name %>
+  </div>
+  <div class="field">
+    <%= f.label :date_sent %><br>
+    <%= f.text_field :date_sent %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :recipient %><br>
+    <%= f.text_field :recipient %>
+  </div>
+  <div class="field">
+    <%= f.label :size_of_image %><br>
+    <%= f.text_field :size_of_image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<h1>Listing sent_images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image name</th>
+      <th>Date sent</th>
+      <th>Quantity</th>
+      <th>Recipient</th>
+      <th>Size of image</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sent_images.each do |sent_image| %>
+      <tr>
+        <td><%= sent_image.image_name %></td>
+        <td><%= sent_image.date_sent %></td>
+        <td><%= sent_image.quantity %></td>
+        <td><%= sent_image.recipient %></td>
+        <td><%= sent_image.size_of_image %></td>
+        <td><%= link_to 'Show', sent_image %></td>
+        <td><%= link_to 'Edit', edit_sent_image_path(sent_image) %></td>
+        <td><%= link_to 'Destroy', sent_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sent image', new_sent_image_path %>
